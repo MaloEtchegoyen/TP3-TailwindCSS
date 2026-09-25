@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(SpaceGrotesk-light.ttf);
+}
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(SpaceGrotesk-Bold.ttf);
+}
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(SpaceGrotesk-Medium.ttf);
+}
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(SpaceGrotesk-Regular.ttf);
+}
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(SpaceGrotesk-SemiBold.ttf);
+}
+
+@theme inline {
+  /* Déclaration de variables CSS dans le thème permet de générer également les classes utilitaires : bg-background, text-background... */
+    --color-bg: var(--clr-bg);
+    --color-accent: var(--clr-accent);
+    --color-main: var(--clr-main);
+    --color-sec: var(--clr-sec);
+    --color-lighter: var(--clr-lighter);
+    --background-image-elm1: var(--elm1);
+    --background-image-elm2: var(--elm2);
+    --font-main: 'SpaceGrotesk', sans-serif
+}
+
+@layer base {
+  :root {
+    /* Primitive Tokens */
+    --clr-white: oklch(1 0 0);
+
+    --clr-gray-300: oklch(87.2% 0.01 258.338);
+    --clr-gray-400: oklch(70.7% 0.022 261.325);
+    --clr-gray-800: oklch(27.8% 0.033 256.848);
+    --clr-gray-900: oklch(21% 0.034 264.665);
+
+    --clr-green: oklch(87.1% 0.15 154.449);
+    --clr-green-300: oklch(79.2% 0.209 151.711);
+
+
+    --clr-bg: var(--clr-gray-900);
+    --clr-accent: var(--clr-green-300);
+    --clr-main: var(--clr-gray-300);
+    --clr-sec: var(--clr-gray-400);
+    --clr-lighter: var(--clr-gray-800);
+
+    --elm1: url("/src/assets/pattern-rings.svg");
+    --elm2: url("/src/assets/pattern-circle.svg");
+  }
+}
